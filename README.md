@@ -4,7 +4,7 @@
 
 Edge Cam is a real-time camera effect. It cuts you out of your room, turns you into a comic-style character with a flame outline, and swaps your background for an animated pop-art world. Everything is controlled with hand gestures. There's no app to install, and nothing leaves your device.
 
-**▶ Try it: [mudit2308.github.io/edge-cam](https://mudit2308.github.io/edge-cam/)**
+**▶ Try it: [mudit2308.github.io/edge-cam](https://mudit2308.github.io/edge-cam/)** (best on a laptop or desktop in Chrome or Edge)
 
 ![Edge Cam](preview.jpg)
 
@@ -21,7 +21,6 @@ Edge Cam is a real-time camera effect. It cuts you out of your room, turns you i
 | 🙌 Two open hands | Spread them to grow the effect, bring them together to shrink it |
 | 🙏 Palms together | Charges your ultimate. Push toward the camera to fire. |
 | ↔️ Tilt your head | Switches theme |
-| 📳 Shake your phone | Switches the look |
 | 📢 Shout | Bursts the effect (optional) |
 
 ## Features
@@ -34,9 +33,8 @@ Edge Cam is a real-time camera effect. It cuts you out of your room, turns you i
 - **Your own background:** use any photo, GIF or short video as the world behind you
 - **Duet mode:** two people on camera get different outline colours
 - **Sound:** synthesized whooshes, impacts and zaps. Load a song and the scene pulses to the beat and bursts on the drop.
-- **Recording:** 3-2-1 countdown, auto-stop after 15, 30 or 60 seconds, a watermark, and sound mixed in. Save straight to your gallery on phones.
+- **Recording:** 3-2-1 countdown, auto-stop after 15, 30 or 60 seconds, a watermark, and sound mixed in.
 - **Share look:** a link that opens Edge Cam with your theme, title and face effect already set
-- **Installable:** add it to your home screen and it opens fullscreen like an app
 
 ## How it works
 
@@ -54,7 +52,7 @@ All processing happens on your device, every frame:
 5. **Web Audio:** every sound effect is synthesized in code. Beat detection watches bass energy for sudden jumps, and a drop is a sustained jump in loudness.
 6. **MediaRecorder** captures the canvas and the audio mix into an MP4 or WebM file.
 
-Phones get a lighter shader, a 30 fps cap, frame-split tracking and automatic quality scaling.
+It also scales its own quality down automatically when the frame rate drops.
 
 **Tech:** HTML, JavaScript (no framework, no build step), WebGL2 / GLSL, MediaPipe Tasks Vision, Web Audio API, MediaRecorder, PWA (manifest and service worker).
 
@@ -69,7 +67,7 @@ python -m http.server 8000
 # open http://localhost:8000
 ```
 
-To try it on your phone, use the GitHub Pages link above. Phones need `https://`.
+**Browser support:** desktop Chrome or Edge is recommended. Mobile support is experimental and may not work on every phone.
 
 ## Privacy
 
